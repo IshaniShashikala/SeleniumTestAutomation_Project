@@ -35,7 +35,17 @@ public class LoginSteps {
         driver.get("https://www.webdriveruniversity.com/Login-Portal/index.html");
     }
 
-    @When("user enters a username {string}")
+//    @When("user enters a username {string}")
+//    public void user_enters_a_username(String username) {
+//        driver.findElement(By.id("text")).sendKeys(username);
+//    }
+//
+//    @When("user enters a username {word}")
+//    public void user_enters_a_outline_username(String username) {
+//        driver.findElement(By.id("text")).sendKeys(username);
+//    }
+
+    @When("user enters a username {}")
     public void user_enters_a_username(String username) {
         driver.findElement(By.id("text")).sendKeys(username);
     }
@@ -62,5 +72,11 @@ public class LoginSteps {
         String login_Message = driver.switchTo().alert().getText();
         Assert.assertEquals(login_Message,message);
 //        Assert.assertEquals(login_Message,"validation succeeded");
+    }
+
+    @Then("user should be presented with a unsuccessful login message {}")
+    public void user_should_be_presented_with_a_unsuccessful_outline_login_message(String expectedMessage) {
+        String login_Message = driver.switchTo().alert().getText();
+        Assert.assertEquals(login_Message,expectedMessage);
     }
 }
