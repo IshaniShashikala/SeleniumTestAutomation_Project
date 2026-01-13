@@ -1,34 +1,17 @@
 package stepDefinitions;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 
+import static driver.DriverFactory.getDriver;
+
 public class LoginSteps {
-    private WebDriver driver;
-
-    @Before("@login")
-    public void setup() {
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/java/drivers/chromedriver");
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL); //this will make selenium webDriver to wait for the entire page is loaded (until the load event fire is returned).
-        driver = new ChromeDriver(chromeOptions);
-        driver.manage().window().maximize();
-    }
-
-    @After("@login")
-    public void tearDown() {
-        driver.quit();
-    }
+    private WebDriver driver = getDriver();
 
     @Given("user accesses the webdriver university login page")
     public void user_accesses_the_webdriver_university_login_page() {

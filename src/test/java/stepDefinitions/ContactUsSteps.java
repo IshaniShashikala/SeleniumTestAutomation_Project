@@ -1,35 +1,20 @@
 package stepDefinitions;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 
+import static driver.DriverFactory.getDriver;
+
 public class ContactUsSteps {
-    private WebDriver driver;
+    private WebDriver driver = getDriver();
 
-//    @Before // execute for all Testcases
-    @Before("@contact-us") // execute for contact-us Tcs
-    public void setup() {
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/java/drivers/chromedriver");
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL); //this will make selenium webDriver to wait for the entire page is loaded (until the load event fire is returned).
-        driver = new ChromeDriver(chromeOptions);
-        driver.manage().window().maximize();
-    }
-
-//    @After // execute for all Testcases
-    @After("@contact-us") // execute for contact-us Tcs
     public void tearDown() {
         driver.quit();
     }
