@@ -4,38 +4,30 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import pageObjects.Base_PO;
 
-import static driver.DriverFactory.getDriver;
-
-public class ContactUsSteps {
+public class ContactUsSteps extends Base_PO {
     private WebDriver driver = getDriver();
 
     public void tearDown() {
         driver.quit();
     }
 
-    public String generateRandomNumber(int length){
-        return RandomStringUtils.randomNumeric(length);
-    }
-
-    public String generateRandomString(int length){
-        return RandomStringUtils.randomAlphabetic(length);
-    }
-
     @Given("user accesses the webdriver university contact us page")
     public void user_accesses_the_webdriver_university_contact_us_page() {
-        driver.get("https://www.webdriveruniversity.com/Contact-Us/contactus.html");
+//        driver.get("https://www.webdriveruniversity.com/Contact-Us/contactus.html");
+        navigateTo_URL("https://www.webdriveruniversity.com/Contact-Us/contactus.html");
     }
 
     @When("user enters a unique first name")
     public void user_enter_a_unique_first_name() {
-        //        driver.findElement(By.xpath("//input[@name='first_name']")).sendKeys("Joe");
-        driver.findElement(By.xpath("//input[@name='first_name']")).sendKeys("AutoFN" + generateRandomNumber(5));
+//        driver.findElement(By.xpath("//input[@name='first_name']")).sendKeys("Joe");
+//        driver.findElement(By.xpath("//input[@name='first_name']")).sendKeys("AutoFN" + generateRandomNumber(5));
+        sendkeys(By.xpath("//input[@name='first_name']"),"AutoFN" + generateRandomNumber(5));
     }
 
     @And("user enters a unique last name")
