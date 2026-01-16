@@ -53,7 +53,7 @@ public class ContactUsSteps extends Base_PO {
     public void user_click_on_the_submit_button() {
 //        driver.findElement(By.xpath("//input[@value='SUBMIT']")).click();
 //        waitForWebElementAndClick(By.xpath("//input[@value='SUBMIT']"));
-        contact_us_po.sclickOn_Submit_Button();
+        contact_us_po.clickOn_Submit_Button();
   }
 
     @When("user enters a specific first name {word}")

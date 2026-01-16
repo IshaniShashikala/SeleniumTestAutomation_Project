@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.testng.Assert;
+import utils.Global_Vars;
 
 public class Contact_Us_PO extends Base_PO{
     private @FindBy(how = How.XPATH, using = "//input[@name='first_name']")
@@ -29,7 +30,7 @@ public class Contact_Us_PO extends Base_PO{
     }
 
     public void navigateTo_Web_Contact_Us_page(){
-        navigateTo_URL("https://www.webdriveruniversity.com/Contact-Us/contactus.html");
+        navigateTo_URL(Global_Vars.WEB_HOMEPAGE_URL + "/Contact-Us/contactus.html");
     }
 
     public void setUnique_FirstName(){
@@ -64,7 +65,7 @@ public class Contact_Us_PO extends Base_PO{
         sendkeys(comment_TextField,comment);
     }
 
-    public void sclickOn_Submit_Button(){
+    public void clickOn_Submit_Button(){
 //        submit_Button.click();
         waitForWebElementAndClick(submit_Button);
     }

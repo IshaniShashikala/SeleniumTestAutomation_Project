@@ -2,6 +2,7 @@ package pageObjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utils.Global_Vars;
 
 public class Login_PO extends Base_PO{
     private @FindBy(id = "text")
@@ -18,7 +19,7 @@ public class Login_PO extends Base_PO{
     }
 
     public void navigateTo_Web_Login_page(){
-        navigateTo_URL("https://www.webdriveruniversity.com/Login-Portal/index.html");
+        navigateTo_URL(Global_Vars.WEB_HOMEPAGE_URL + "/Login-Portal/index.html");
     }
 
     public void setUsername(String username){
