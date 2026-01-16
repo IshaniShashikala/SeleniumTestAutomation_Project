@@ -71,7 +71,7 @@ public class Contact_Us_PO extends Base_PO{
 
     public void validate_Successful_SubmissionMessage_Text(String message){
         waitFor(successfulSubmission_Message_Text);
-        Assert.assertEquals(successfulSubmission_Message_Text, message);
+        Assert.assertEquals(successfulSubmission_Message_Text.getText(), message);
 //        Assert.assertEquals(successfulSubmission_Message_Text, "Thank You for your Message!");
     }
 
