@@ -19,6 +19,16 @@
                     </configuration>
                     <version>3.14.1</version>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.4</version>
+                <configuration>
+                    <suitXmlFiles>
+                        <suitXmlFile>src/test/java/runners/testng/testng.xml</suitXmlFile>
+                    </suitXmlFiles>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
