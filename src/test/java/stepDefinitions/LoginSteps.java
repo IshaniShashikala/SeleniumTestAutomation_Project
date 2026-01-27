@@ -67,8 +67,8 @@ public class LoginSteps extends Base_PO {
         login_po.validate_UnsuccessfulLogin_Message(message);
     }
 
-    @Then("user should be presented with a unsuccessful login message {}")
-    public void user_should_be_presented_with_a_unsuccessful_outline_login_message(String expectedMessage) {
+    @Then("user should be presented with the following login validation message {}")
+    public void user_should_be_presented_with_the_following_login_validation_message(String expectedMessage) {
 //        String login_Message = driver.switchTo().alert().getText();
 //        Assert.assertEquals(login_Message,expectedMessage);
         waitFor_Alert_And_ValidateText(expectedMessage);

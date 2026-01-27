@@ -23,7 +23,7 @@ Feature: Login Page
     When user enters a username <username>
     And user enters a password <password>
     And user clicks on the login button
-    Then user should be presented with a unsuccessful login message <loginValidationMessage>
+    Then user should be presented with the following login validation message <loginValidationMessage>
 
     Examples:
       | username  | password     | loginValidationMessage |
