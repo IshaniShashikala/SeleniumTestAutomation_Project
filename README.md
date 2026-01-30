@@ -4,7 +4,9 @@ This is a project with Selenium where BDD Cucumber Framework is applied for the 
 
 ## Tech Stack
 Automation Tool: Selenium
+
 Framework: BDD Cucumber
+
 Language: Java
 
 ## Getting Started
