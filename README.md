@@ -46,3 +46,4 @@ Language: Java
 16. Continuous Integration using Jenkins
 17. Visually appealing reports within Jenkins and attaching images to those reports
 18. Extensible Choice Parameters (Selection Dropdown lists) via Jenkins
+19. Maintain separate test.xml files to run smoke, regression separately or as a group at once
