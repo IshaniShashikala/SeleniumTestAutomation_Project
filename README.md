@@ -47,6 +47,6 @@ Language: Java
 17. Visually appealing reports within Jenkins and attaching images to those reports
 18. Extensible Choice Parameters (Selection Dropdown lists) via Jenkins
 19. Maintain separate test.xml files to run smoke, regression separately or as a group at once
-20. 20. This project has been integrated with Jenkins. Choice Parameters have been used for  manual execution of jenkins job.
-21. Configured for Automated Regression Test pack execution for a code change via git push.
+20. This project has been integrated with Jenkins. Choice Parameters have been used for  manual execution of jenkins job.
+21. Configured for automated Regression Test pack execution on Jenkins for a code change via git push.
 
