@@ -4,6 +4,7 @@
 <suite name="Suite" parallel="classes" data-provider-thread-count="2">
     <test name="Test">
         <groups>
+<!-- there can be only one <run> in a xml file-->
             <run>
                 <include name="smoke"/>
                 <include name="regression"/>
