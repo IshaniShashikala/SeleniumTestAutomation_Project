@@ -5,7 +5,7 @@ pipeline {
 
         string(
                 name: 'BRANCH_NAME',
-                // choices: ['main', 'develop'],
+                // choices: ['main', 'develop'], // doesn't need branch parameter for MultiBranch Pipeline
                 defaultValue: 'main',
                 description: 'Git branch to build'
             )
